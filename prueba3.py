@@ -118,22 +118,51 @@ colors2 = plt.cm.viridis( np.random.rand(20))
 colors3 = plt.cm.viridis( np.random.rand(30))
 
 
+
+
 ax= plt.subplot(projection='polar')
+
+#  ! KO 
+
+
+# ax.bar((np.pi - theta2), (radii2), width=width, bottom=0.0, color="C1", alpha=0.5)
+
+# ax.set_title( r' \textbf {KO}' ,fontsize=40)
+
+#  ! WT 
+
 # ax.bar(theta, radii, width=width, bottom=0.0, color='C0', alpha=0.5)
 
-# ax2= plt.subplot(projection='polar')
-# ax2.bar((np.pi - theta2), (radii2), width=width, bottom=0.0, color="C1", alpha=0.5)
 
+# ax.set_title( r' \textbf {WT}' ,fontsize=40)
+
+#  ! PLX 
 
 
 ax.bar((np.pi-theta3), radii3, width=width, bottom=0.0, color='C3', alpha=0.5)
-# # ax.bar(theta4, radii4, width=width, bottom=0.0, color=colors4, alpha=0.5)
-# # ax.bar(theta5, radii5, width=width, bottom=0.0, color=colors5, alpha=0.5)
+
 ax.set_title( r' \textbf {PLX}' ,fontsize=40)
-ax.set_rticks([0.05, 0.10, 0.15, 0.20])  # Less radial ticks
-ax.tick_params(axis='x', labelsize=20)
-ax.tick_params(axis='y', labelsize=20)
+
+
+
+ax.set_rticks([0.05, 0.10, 0.15, 0.20,0.25])  # Less radial ticks
+
+
+ax.tick_params(axis='x', labelsize=15)
+ax.tick_params(axis='y', labelsize=15)
+ax.set_ylim(0.0,0.25)
+
+
+# plt.savefig('WT.pdf', dpi=1000)
+# plt.savefig('WT.png', dpi=1000)
+
+# plt.savefig('KO.pdf', dpi=1000)
+# plt.savefig('KO.png', dpi=1000)
+
+plt.savefig('PLX.pdf', dpi=1000)
+plt.savefig('PLX.png', dpi=1000)
 
 plt.tight_layout()
+
 
 plt.show()
