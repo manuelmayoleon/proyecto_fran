@@ -100,7 +100,7 @@ col1_cc = list(micro_cc.head(0).columns)
 
 f = plt.figure(figsize=(16, 12))
 
-ax = sns.heatmap(c_cc, annot=True,xticklabels=col1, yticklabels=col1,cmap="crest")
+ax = sns.heatmap(c, annot=True,xticklabels=col1, yticklabels=col1,cmap="crest")
 
 plt.title(r'\bf CORRELATION MATRIX ', fontsize=30)
 
